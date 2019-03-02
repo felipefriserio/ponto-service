@@ -8,10 +8,10 @@
 		<version>2.1.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.ponto_service</groupId>
-	<artifactId>service</artifactId>
+	<groupId>br.com.pontoService</groupId>
+	<artifactId>ponto-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>service</name>
+	<name>ponto-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

@@ -1,4 +1,4 @@
-package br.com.ponto_service.model;
+package br.com.pontoService.model;
 
 import java.time.LocalDateTime;
 

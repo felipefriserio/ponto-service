@@ -1,4 +1,4 @@
-package br.com.ponto_service.controller;
+package br.com.pontoService.controller;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.ponto_service.model.Ponto;
-import br.com.ponto_service.service.PontoService;
+import br.com.pontoService.model.Ponto;
+import br.com.pontoService.service.PontoService;
 
 @RestController
 @RequestMapping("/ponto")

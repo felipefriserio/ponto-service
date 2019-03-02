@@ -1,4 +1,4 @@
-package br.com.ponto_service.repository;
+package br.com.pontoService.repository;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import br.com.ponto_service.model.Ponto;
+import br.com.pontoService.model.Ponto;
 
 @Repository
 public interface PontoRepository extends CrudRepository<Ponto, Integer> {
