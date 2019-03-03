@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 public class ServiceApplication {
 
 	public static void main(String[] args) {
-		System.setProperty("server.servlet.context-path", "/ponto-service");
+		System.setProperty("server.servlet.context-path", "/pontoService");
 		SpringApplication.run(ServiceApplication.class, args);
 	}
 
