@@ -7,12 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.pontoService.model.Ponto;
+import br.com.pontoService.repository.PontoRepository;
 
 @Service
 public class PontoService {
 	
 	@Autowired
-	PontoService userRepository;
+	PontoRepository userRepository;
 	
 	public Ponto save(Ponto ponto) {
 		return this.userRepository.save(ponto);
