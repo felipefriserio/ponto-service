@@ -1,6 +1,7 @@
 package br.com.pontoService.model;
 
-import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +17,7 @@ public class Ponto {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private String id;
 	private TipoMarcacao tipo;
-	private LocalDateTime marcacao;
+	private ZonedDateTime marcacao;
 	
 	
 	public String getId() {
@@ -31,11 +32,12 @@ public class Ponto {
 	public void setTipo(TipoMarcacao tipo) {
 		this.tipo = tipo;
 	}
-	public LocalDateTime getMarcacao() {
+	public ZonedDateTime getMarcacao() {
 		return marcacao;
 	}
 	public void setMarcacao(String valor) {
-		this.marcacao = LocalDateTime.now();;
+		ZoneId fusoHorarioDeSaoPaulo = ZoneId.of("America/Sao_Paulo");
+		this.marcacao = ZonedDateTime.now(fusoHorarioDeSaoPaulo);
 	}
 
 }
