@@ -36,7 +36,7 @@ public class Ponto {
 	public LocalDateTime getMarcacao() {
 		return marcacao;
 	}
-	public void setMarcacao() {
+	public void setMarcacao(String valor) {
 		ZonedDateTime utcZoned = ZonedDateTime.now();
 		ZoneId zonaSaoPaulo = ZoneId.of("America/Sao_Paulo");
 		ZonedDateTime horarioSP = utcZoned.withZoneSameInstant(zonaSaoPaulo);
