@@ -1,5 +1,6 @@
 package br.com.pontoService.model;
 
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
@@ -17,7 +18,7 @@ public class Ponto {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private String id;
 	private TipoMarcacao tipo;
-	private ZonedDateTime marcacao;
+	private LocalDateTime marcacao;
 	
 	
 	public String getId() {
@@ -32,12 +33,16 @@ public class Ponto {
 	public void setTipo(TipoMarcacao tipo) {
 		this.tipo = tipo;
 	}
-	public ZonedDateTime getMarcacao() {
+	public LocalDateTime getMarcacao() {
 		return marcacao;
 	}
-	public void setMarcacao(String valor) {
-		ZoneId fusoHorarioDeSaoPaulo = ZoneId.of("America/Sao_Paulo");
-		this.marcacao = ZonedDateTime.now(fusoHorarioDeSaoPaulo);
+	public void setMarcacao() {
+		ZonedDateTime utcZoned = ZonedDateTime.now();
+		ZoneId zonaSaoPaulo = ZoneId.of("America/Sao_Paulo");
+		ZonedDateTime horarioSP = utcZoned.withZoneSameInstant(zonaSaoPaulo);
+		LocalDateTime marcacao = horarioSP.toLocalDateTime();
+		
+		this.marcacao = marcacao;
 	}
 
 }
